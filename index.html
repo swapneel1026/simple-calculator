@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="calc-container">
+      <div id="calc-display">
+        <div id="previous-operand">0</div>
+        <div id="current-operand">Answer</div>
+      </div>
+      <div id="calc-numeric-pad">
+        <button class="num red" onclick="clearFunction('clearScreen')">
+          AC
+        </button>
+        <button class="num operator" onclick="controlFunctionsq('square')">
+          x2
+        </button>
+        <button class="num operator" onclick="controlFunctionfr('fraction')">
+          1/x
+        </button>
+        <button class="num red" onclick="singleCharacterClear('clearDigit')">
+          C
+        </button>
+        <button class="num" onclick="digitFucntion('7')">7</button>
+        <button class="num" onclick="digitFucntion('8')">8</button>
+        <button class="num" onclick="digitFucntion('9')">9</button>
+        <button class="num operator" onclick="controlFunction('*')">*</button>
+        <button class="num" onclick="digitFucntion('4')">4</button>
+        <button class="num" onclick="digitFucntion('5')">5</button>
+        <button class="num" onclick="digitFucntion('6')">6</button>
+        <button class="num operator" onclick="controlFunction('+')">+</button>
+        <button class="num" onclick="digitFucntion('1')">1</button>
+        <button class="num" onclick="digitFucntion('2')">2</button>
+        <button class="num" onclick="digitFucntion('3')">3</button>
+        <button class="num operator" onclick="controlFunction('-')">-</button>
+        <button class="num" onclick="dotFucntion('.')">.</button>
+        <button class="num" onclick="digitFucntion('0')">0</button>
+        <button class="num" id="progress-btn" onclick="evaluateFunction('=')">
+          =
+        </button>
+        <button class="num operator" onclick="controlFunction('/')">/</button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
