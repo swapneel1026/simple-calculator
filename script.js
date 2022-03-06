@@ -2,12 +2,12 @@ let operand1 = "";
 let operand2 = "";
 let operator = "";
 
-function currentDisplay() {
+let currentDisplay = () => {
   document.getElementById("previous-operand").innerText =
     operand1 + operator + operand2;
-}
+};
 
-function digitFucntion(num) {
+let digitFucntion = (num) => {
   console.log("typed", num);
   if (operand1 === "" || operator === "") {
     operand1 += num;
@@ -19,14 +19,14 @@ function digitFucntion(num) {
   if (operand1 === "1" && operator === "+") {
     special();
   }
-}
+};
 
-function controlFunction(inputOperator) {
+let controlFunction = (inputOperator) => {
   operator = inputOperator;
   currentDisplay();
-}
+};
 
-function evaluateFunction() {
+let evaluateFunction = () => {
   let Intoperand1 = parseInt(operand1);
   let Intoperand2 = parseInt(operand2);
   let answer = eval(Intoperand1 + operator + Intoperand2);
@@ -45,8 +45,8 @@ function evaluateFunction() {
   operand1 = "";
   operand2 = "";
   operator = "";
-}
-function clearFunction() {
+};
+let clearFunction = () => {
   document.getElementById("current-operand").innerText = "Answer";
   document.getElementById("previous-operand").innerText = "0";
   operand1 = "";
@@ -54,13 +54,13 @@ function clearFunction() {
   operator = "";
   document.getElementById("calc-display").style.backgroundImage = "none";
   document.getElementById("progress-btn").style.cursor = "pointer";
-}
-function singleCharacterClear() {
+};
+let singleCharacterClear = () => {
   let str = document.getElementById("previous-operand").innerText;
   str = str.slice(0, -1);
   document.getElementById("previous-operand").innerText = str;
-}
-function controlFunctionsq() {
+};
+let controlFunctionsq = () => {
   if (document.getElementById("previous-operand").innerText === operator) {
     document.getElementById("current-operand").innerText = "Syntax Error";
   } else {
@@ -68,8 +68,8 @@ function controlFunctionsq() {
     document.getElementById("current-operand").innerText =
       "Answer=" + sqaureOperand;
   }
-}
-function controlFunctionfr() {
+};
+let controlFunctionfr = () => {
   if (document.getElementById("previous-operand").innerText === operator) {
     document.getElementById("current-operand").innerText = "Syntax Error";
   } else {
@@ -77,4 +77,4 @@ function controlFunctionfr() {
     document.getElementById("current-operand").innerText =
       "Answer=" + fractionOperand;
   }
-}
+};
