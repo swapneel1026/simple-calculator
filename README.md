@@ -2,3 +2,5 @@
 A simple calculator 
 1)It performs all the basic operations of addition , substraction ,division, multiplicatin as well as it has buttons for telling the square of the number entered.
 2)Explore the feature by pressing "1+=" on the calculator and some intresting function will invoke.
+
+## link to access :-https://swapneel1026.github.io/simple-calculator/
