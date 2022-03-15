@@ -10,12 +10,16 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
 }
+
+html {
+  font-size: 62.5%;
+}
 #calc-container {
-  height: 400px;
-  width: 300px;
+  height: 40rem;
+  max-width: 30rem;
   background-color: white;
 }
 #calc-display {
@@ -24,7 +28,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 10px;
+  padding: 0.1rem;
   word-wrap: break-word;
   word-break: break-all;
   background-repeat: no-repeat;
@@ -33,38 +37,39 @@ body {
   transition: background-image 3s ease-in;
   color: white;
 
-  border: 2px solid whitesmoke;
+  border: 0.2rem solid whitesmoke;
   background-color: rgba(0, 0, 0, 0.8);
 }
 #previous-operand {
   color: white;
+  font-size: 1.5rem;
 }
 #current-operand {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 #calc-numeric-pad {
   height: 80%;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 75px);
+  grid-template-columns: repeat(4, 7.5rem);
 }
 
 .num {
   cursor: pointer;
-  border: 1px solid white;
+  border: 0.1rem solid white;
   background-color: rgb(158, 158, 238);
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 .num:hover,
 .num.operator:hover {
-  border: 1px solid goldenrod;
+  border: 0.1rem solid goldenrod;
   background-color: silver;
 }
 .num.operator {
-  font-size: 20px;
+  font-size: 2rem;
   background-color: tomato;
 }
 .red {
