@@ -39,7 +39,7 @@ let evaluateFunction = () => {
   } else {
     setTimeout(evaluateFunction, 2000);
 
-    document.getElementById("current-operand").innerText = "Answer=" + answer;
+    document.getElementById("current-operand").innerText = answer;
   }
 
   operand1 = "";
@@ -47,7 +47,7 @@ let evaluateFunction = () => {
   operator = "";
 };
 let clearFunction = () => {
-  document.getElementById("current-operand").innerText = "Answer";
+  document.getElementById("current-operand").innerText = "";
   document.getElementById("previous-operand").innerText = "0";
   operand1 = "";
   operand2 = "";
@@ -65,8 +65,7 @@ let controlFunctionsq = () => {
     document.getElementById("current-operand").innerText = "Syntax Error";
   } else {
     sqaureOperand = operand1 * operand1;
-    document.getElementById("current-operand").innerText =
-      "Answer=" + sqaureOperand;
+    document.getElementById("current-operand").innerText = sqaureOperand;
   }
 };
 let controlFunctionfr = () => {
@@ -74,7 +73,6 @@ let controlFunctionfr = () => {
     document.getElementById("current-operand").innerText = "Syntax Error";
   } else {
     fractionOperand = 1 / operand1;
-    document.getElementById("current-operand").innerText =
-      "Answer=" + fractionOperand;
+    document.getElementById("current-operand").innerText = fractionOperand;
   }
 };
